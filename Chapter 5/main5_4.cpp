@@ -1,21 +1,32 @@
-// This program demonstrates the prefix and postfix
- // modes of the increment and decrement operators.
+// This program assists a technician in the process
+// of checking a substance's temperature.
 #include <iostream>
 using namespace std;
 
 int main()
- {
- int num = 4;
+{
+const double MAX_TEMP = 102.5; // Maximum temperature
+double temperature; // To hold the temperature
 
- cout << num << endl; // Displays 4
- cout << num++ << endl; // Displays 4, then adds 1 to num
- cout << num << endl; // Displays 5
- cout << ++num << endl; // Adds 1 to num, then displays 6
- cout << endl; // Displays a blank line
- cout << num << endl; // Displays 6
- cout << num-- << endl; // Displays 6, then subtracts 1 from num
- cout << num << endl; // Displays 5
- cout << --num << endl; // Subtracts 1 from num, then displays 4
+// Get the current temperature.
+cout << "Enter the substance's Celsius temperature: ";
+cin >> temperature;
 
- return 0;
- }
+// As long as necessary, instruct the technician
+// to adjust the thermostat.
+while (temperature > MAX_TEMP)
+{
+cout << "The temperature is too high. Turn the\n";
+cout << "thermostat down and wait 5 minutes.\n";
+cout << "Then take the Celsius temperature again\n";
+cout << "and enter it here: ";
+cin >> temperature;
+}
+
+// Remind the technician to check the temperature
+// again in 15 minutes.
+cout << "The temperature is acceptable.\n";
+cout << "Check it again in 15 minutes.\n";
+
+return 0;
+}
